@@ -1,0 +1,21 @@
+{
+  "name": "@mockcard/nextjs",
+  "version": "2.0.0",
+  "description": "MockCard for Next.js: probe guard for route handlers, in-process chaos runs and test matchers.",
+  "author": "Arixeva Labs <hello@arixevalabs.com>",
+  "license": "MIT",
+  "homepage": "https://www.mockcard.io/docs",
+  "repository": { "type": "git", "url": "git+https://github.com/arixevalabs/mockcard-nextjs.git" },
+  "bugs": { "url": "https://github.com/arixevalabs/mockcard-nextjs/issues" },
+  "keywords": ["mockcard", "nextjs", "next.js", "app router", "payments", "webhooks", "stripe", "razorpay", "chaos testing", "webhook testing"],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "scripts": { "build": "tsc -p tsconfig.json", "test": "vitest run", "prepublishOnly": "npm run build && npm test" },
+  "peerDependencies": { "next": ">=14" },
+  "dependencies": { "mockcard": "^2.0.0" },
+  "devDependencies": { "typescript": "5.9.3", "vitest": "3.2.4" }
+}
